@@ -1,71 +1,65 @@
-img{
-	width: 150px;
-	height: 150px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.dark-blue{
+    background: rgba(92,149,255,1);
+background: -moz-linear-gradient(left, rgba(92,149,255,1) 0%, rgba(1,84,239,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(92,149,255,1)), color-stop(100%, rgba(1,84,239,1)));
+background: -webkit-linear-gradient(left, rgba(92,149,255,1) 0%, rgba(1,84,239,1) 100%);
+background: -o-linear-gradient(left, rgba(92,149,255,1) 0%, rgba(1,84,239,1) 100%);
+background: -ms-linear-gradient(left, rgba(92,149,255,1) 0%, rgba(1,84,239,1) 100%);
+background: linear-gradient(to right, rgba(92,149,255,1) 0%, rgba(1,84,239,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c95ff', endColorstr='#0154ef', GradientType=1 );
+
 }
 
-#id{
-    align-content: center;
+.your-class{
+    height: 32px;
 }
 
-.pic{
-    padding: 10px;
+.pattern{
+background-image: url("images/random-grey-variations.png");
+background-repeat: repeat;
 }
 
-.navbar-custom
-{
-    
+.pattern2{
+background-image: url("images/black-thread-light.png");
+background-repeat: repeat;
 }
 
-.home{
-
-    float: none;
-    margin: 0 auto;
-    margin-top: 100px;
-    background-color: white;
-	padding-top: 40px;
-    padding-bottom: 10px;
-    border-radius: 25px;
-    box-shadow: 10px 10px 6px -6px ;
-    max-width: 350px;
-    
-}
-
-.contact-info{
-    
-    box-shadow: 10px 10px 6px -6px ;
+.mcenter{
+    display:block;
+    margin:auto;
+    float: left;
 }
 
 
-.aboutMe
-{
-    background-color: #2c3e50;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+#exp-img{
+    height:50px;
+    weight:50px;
+}
+.exp-img-small{
+    height:30px;
+    weight:30px;
 }
 
+.exp-img-big{
+    height:60px;
+    weight:60px;
+}
 
+// Mixin itself
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
 
-#designation
-{
-	text-align: right;
-    padding-right: 50px;
-    
-}
-#name{
-	text-align: center;
-    font-family: Oswalds;
-    
-}
-.container-fluid{
-	 padding-top: 70px;
-      padding-bottom: 70px;
-}
-body{
-	background-color: cadetblue;
+// Usage as a mixin
+.element {
+  @include clearfix;
 }
 
 
